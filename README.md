@@ -1,4 +1,3 @@
-
 # API de Gestão Acadêmica
 
 Esta API foi desenvolvida para a gestão acadêmica de alunos e disciplinas, utilizando Node.js, Express e Mongoose para interagir com um banco de dados MongoDB.
@@ -11,11 +10,17 @@ Esta API foi desenvolvida para a gestão acadêmica de alunos e disciplinas, uti
 ## Executando a API
 
 Para iniciar o servidor, execute:
+
 ```bash
-npm start
+node ./app.js
 ```
 
-O servidor será iniciado na porta 3000 ou na porta especificada na variável de ambiente `PORT`.
+- O servidor será iniciado na porta 3002 ou na porta especificada na variável de ambiente `PORT`.
+
+- Além de todas as Dependências necessárias, tem que ser Instalado o pacote dotenv, que pode ser instalado usando o comando: 
+```bash
+npm install dotenv
+```
 
 ## Endpoints
 
@@ -29,13 +34,13 @@ O servidor será iniciado na porta 3000 ou na porta especificada na variável de
   - `email` (string): Email do aluno.
   - `senha` (string): Senha do aluno.
 - **Exemplo de solicitação:**
-    ```json
-    {
-        "nome": "João da Silva",
-        "email": "joao@example.com",
-        "senha": "senha123"
-    }
-    ```
+  ```json
+  {
+    "nome": "João da Silva",
+    "email": "joao@example.com",
+    "senha": "senha123"
+  }
+  ```
 
 ### Autenticar Aluno
 
@@ -46,18 +51,18 @@ O servidor será iniciado na porta 3000 ou na porta especificada na variável de
   - `email` (string): Email do aluno.
   - `senha` (string): Senha do aluno.
 - **Exemplo de solicitação:**
-    ```json
-    {
-        "email": "joao@example.com",
-        "senha": "senha123"
-    }
-    ```
+  ```json
+  {
+    "email": "joao@example.com",
+    "senha": "senha123"
+  }
+  ```
 - **Exemplo de resposta:**
-    ```json
-    {
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-    }
-    ```
+  ```json
+  {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  }
+  ```
 
 ### Matricular em Disciplina
 
@@ -69,11 +74,11 @@ O servidor será iniciado na porta 3000 ou na porta especificada na variável de
 - **Parâmetros:**
   - `disciplinaId` (string): ID da disciplina.
 - **Exemplo de solicitação:**
-    ```json
-    {
-        "disciplinaId": "60c72b2f9b1e8a3f88df8b2d"
-    }
-    ```
+  ```json
+  {
+    "disciplinaId": "60c72b2f9b1e8a3f88df8b2d"
+  }
+  ```
 
 ### Listar Disciplinas
 
@@ -81,22 +86,22 @@ O servidor será iniciado na porta 3000 ou na porta especificada na variável de
 - **Método:** `GET`
 - **Descrição:** Lista todas as disciplinas.
 - **Exemplo de resposta:**
-    ```json
-    [
-        {
-            "_id": "60c72b2f9b1e8a3f88df8b2d",
-            "nome": "Matemática",
-            "codigo": "MAT101",
-            "professor": "Prof. Silva"
-        },
-        {
-            "_id": "60c72b3e9b1e8a3f88df8b2e",
-            "nome": "História",
-            "codigo": "HIS102",
-            "professor": "Prof. Souza"
-        }
-    ]
-    ```
+  ```json
+  [
+    {
+      "_id": "60c72b2f9b1e8a3f88df8b2d",
+      "nome": "Matemática",
+      "codigo": "MAT101",
+      "professor": "Prof. Silva"
+    },
+    {
+      "_id": "60c72b3e9b1e8a3f88df8b2e",
+      "nome": "História",
+      "codigo": "HIS102",
+      "professor": "Prof. Souza"
+    }
+  ]
+  ```
 
 ### Cadastrar Disciplina
 
@@ -108,13 +113,13 @@ O servidor será iniciado na porta 3000 ou na porta especificada na variável de
   - `codigo` (string): Código da disciplina.
   - `professor` (string): Nome do professor.
 - **Exemplo de solicitação:**
-    ```json
-    {
-        "nome": "Física",
-        "codigo": "FIS103",
-        "professor": "Prof. Lima"
-    }
-    ```
+  ```json
+  {
+    "nome": "Física",
+    "codigo": "FIS103",
+    "professor": "Prof. Lima"
+  }
+  ```
 
 ## Modelos de Dados
 
