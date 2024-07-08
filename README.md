@@ -149,3 +149,12 @@ npm install dotenv
 - mongoose
 - bcrypt
 - jsonwebtoken
+
+**Instruções:**
+
+- Utilize o framework Express para criar as rotas da API.
+- Defina uma estrutura em camadas para construir a API.
+- Implemente a conexão com um banco de dados MongoDB para armazenar os dados.
+- Utilize o Mongoose, ou outro ODM, para interação com o banco de dados.
+- Se preferir, utilize um banco de dados no Atlas para hospedar os dados.
+- Teste as rotas utilizando ferramentas como Postman, Thunder Client ou Insomnia para verificar o funcionamento correto da API.
